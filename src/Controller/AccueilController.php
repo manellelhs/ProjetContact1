@@ -8,13 +8,11 @@ use Symfony\Component\Routing\Annotation\Route;
 class AccueilController extends AbstractController
 {
     /**
-     * @Route("/accueil", name="accueil")
+     * @Route("/accueil", name="accueil", methods={"GET"})
      */
     public function index()
     {
-        return $this->render('accueil/index.html.twig', [
-            'controller_name' => 'AccueilController',
-        ]);
+        return $this->render('accueil/index.html.twig', );
     }
+
 }
-//manelle
