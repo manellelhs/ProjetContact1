@@ -3,10 +3,9 @@
 {% block title %}LISTE DES CONTACTS{% endblock %}
 
 {% block body %}
-<h1 class="text-center pt-2">LISTE DE CONTACTS</h1>
+<h1 class="text-center pt-2">FICHE DU CONTACT</h1>
 
 <div class="row">
-    {% for leContact in lesContacts %}
         <div class="col-sm-12 col-md-12 col-lg-4 col-xl-3">
             <div class="card mb-3">
                 <h4 class="card-header">{{ leContact.nom}} {{leContact.prenom }}</h4>
@@ -30,7 +29,6 @@
                 </div>
             </div>
         </div>
-    {% endfor %} 
 </div>
 
 {% endblock %}
