@@ -24,12 +24,13 @@ class ContactsFixtures extends Fixture
             $type2="male";
         }    
         else {
+            
                 $type="women";
                 $type2= "female";
             }     
         $contact=new Contact();
         $contact->setNom($faker->lastName())
-                ->setPrenom($faker->firstName($type))
+                ->setPrenom($faker->firstName($type2))
                 ->setRue($faker->streetAddress())
                 ->setCp($faker->numberBetween(7500,92000))
                 ->setVille($faker->city()) 
