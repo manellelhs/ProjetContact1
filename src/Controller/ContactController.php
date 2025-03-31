@@ -22,12 +22,11 @@ class ContactController extends AbstractController
     }
 
     #[Route('/contact/{id}', name: 'ficheContact')]
-    public function ficheContact($id, ContactRepository $repo ): Response
+    public function ficheContact(Contact $contact): Response
     {
-        $Contact=$repo->find($id);
         return $this->render('contact/ficheContact.html.twig', [
             'controller_name' => 'ContactController',
-            'leContact' => $Contact
+            'leContact' => $contact
         ]
     );
     }
