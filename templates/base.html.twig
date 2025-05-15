@@ -9,7 +9,7 @@
     </head>
     <body>
     {# barre de navigation #}
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">Mes Contacts</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -17,9 +17,18 @@
 
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="{{path("contacts")}}">Liste Des Contacts</a>
-                   </li> 
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Gestion des Contacts</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{{path("contacts")}}">Liste Des Contacts</a>
+                        <div class="dropdown-divider"></div>    
+                            <a class="dropdown-item" href="{{path('listeContactSexe' , {'sexe': 0})}}">Liste Des Hommes</a>
+                            <a class="dropdown-item" href="{{path('listeContactSexe' , {'sexe': 1})}}">Liste Des Femmes</a>
+
+                    </div>
+                </li>
+           
                 <li class="nav-item">
                     <a class="nav-link" href="{{path("categories")}}">Liste Des Catégorie</a>
                 </li> 

@@ -22,6 +22,15 @@
             </div>
         </div>
         <a href="{{path('categories')}}" class="btn bts-success btn-block text-center">Revenir a la liste </a>
+        <hr>
+        <div class="row">
+            {% for leContact in laCategorie.contacts %}
+                <div class="col-sm-12 col-md-12 col-lg-4 col-xl-3">
+                    {{ include('contact/_ficheContact.html.twig', {'mode':'ficheCategorie'})}}
+                </div>
+            {% endfor %} 
+        </div>
+
 </div>
 
 {% endblock %}
