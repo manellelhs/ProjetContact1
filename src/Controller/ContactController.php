@@ -35,11 +35,13 @@ class ContactController extends AbstractController
     public function listeContactSexe($sexe, ContactRepository $repo): Response
     {
    
-        $Contacts=$repo->findBy
-        (
-            ['sexe' => $sexe ],
-            ['nom' => 'ASC']
-    );
+    //     $Contacts=$repo->findBy
+    //     (
+    //         ['sexe' => $sexe ],
+    //         ['nom' => 'ASC']
+    // );
+
+    $Contacts=$repo->findBySexe($sexe);
         return $this->render('contact/listeContact.html.twig', [
             'controller_name' => 'ContactController',
             'lesContacts' => $Contacts
